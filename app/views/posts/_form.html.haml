@@ -1,7 +1,9 @@
 = simple_form_for @post do |f|
 	%p Select the Post Type
-	= f.association :post_type, as: :radio_buttons, value_method: :id, label_method: "#{:post_type}"
-	/ = select_tag(:language_id, options_for_select(@languages), :prompt=> "Select Language")
+	/ = f.association :post_type, as: :radio_buttons, value_method: :id, label_method: :post_type, include_blank: false, id: :id
+	= f.collection_radio_buttons :post_type_id, PostType.all, :id, :post_type
+	= select_tag(:language_id, options_for_select(@languages), :prompt=> "Select Language")
+	/= select_tag(:post_type_id, options_for_select(@post_types), :prompt=> "Select Type")
 	= f.input :title, label: "Title"
 	= f.input :description, label: "Description"
 	= f.button :submit

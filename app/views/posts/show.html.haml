@@ -1,6 +1,9 @@
 %h1= @post.title
 %p= @post.description
-%p= @post.post_type_id
+%p 
+	Post Type is:
+	=@post.post_type_id
+%p= @post.language_id
 
 .actions
 	-if user_signed_in?

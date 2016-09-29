@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-	before_action :find_post, only: [:show, :edit, :update, :destroy, :learn]
+	before_action :find_post, only: [:show, :edit, :update, :destroy]
 	before_action :authenticate_user!
 
 	def index
@@ -16,14 +16,15 @@ class PostsController < ApplicationController
 		@post = current_user.posts.build
 		# Map each post_type string to the post_type_id
 		@post_types = PostType.all.map{ |p| [p.post_type, p.id] }
-		# @languages = Language.all.map{ |l| [l.language, l.id]}
+		@languages = Language.all.map{ |l| [l.language, l.id]}
 	end
 
 	def create
-		@post = current_user.posts.build(post_params)
-		@post.post_type_id = params[:post_type_id]
-		# @post.language_id = params[:language_id]
-		if @post.save
+		@post = current_user.posts.build
+		@post_types = PostType.all.map{ |p| [p.post_type, p.id] }
+		# @post.post_type_id = params[:post_type_id]
+		@post.language_id = params[:language_id]
+		if @post.save(post_params)
 			redirect_to @post
 		else
 			render 'new'
@@ -33,12 +34,12 @@ class PostsController < ApplicationController
 	def edit
 		# Map each post_type string to the post_type_id
 		@post_types = PostType.all.map{ |p| [p.post_type, p.id] }
-		# @languages = Language.all.map{ |l| [l.language, l.id]}
+		@languages = Language.all.map{ |l| [l.language, l.id]}
 	end
 
 	def update
 		@post.post_type_id = params[:post_type_id]
-		# @post.language_id = params[:language_id]
+		@post.language_id = params[:language_id]
 		if @post.update(post_params)
 			redirect_to @post
 		else
@@ -47,6 +48,7 @@ class PostsController < ApplicationController
 	end
 
 	def destroy
+		@post.delete
 	end
 
 

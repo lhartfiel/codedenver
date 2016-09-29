@@ -11,8 +11,6 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  # get "/posts/learn"
-  # get "/pages/:page" => "pages#show"
 
 
   # Example resource route with sub-resources:
