@@ -1,0 +1,16 @@
+header {
+
+	.logo, li{
+		display: inline-block;
+	}
+
+	.logo {
+		float: left;
+	}
+	ul {
+		float: right;
+	}
+	a {
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,97 @@
+@import 'variables';
+@import 'typography';
+
+.form-wrapper {
+	background: $c-purple;
+
+	h2 {
+		position: relative;
+		margin-bottom: 40px;
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -20px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			border-bottom: 1px solid $c-white;
+			width: 80%;
+		}
+	}
+
+	label {
+		position: absolute;
+	    top: 50%;
+	    padding-left: 20px;
+	    transform: translateY(-50%);
+	    text-transform: uppercase;
+	    color: $c-black-50;
+	    transition: .3s ease all;
+
+	    &.active {
+	    	top: 0;
+	    	color: transparent;
+
+	    }
+	}
+	.input {
+		position: relative;
+		margin-bottom: 20px;
+
+		&:focus {
+			label {
+				color: transparent;
+			}
+		}
+	}
+	input {
+		width: 100%;
+		height: 60px;
+		padding-left: 20px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.user_remember_me {
+		label {
+			position: relative;
+			color: $c-white;
+			padding-left: 0;
+
+			input {
+				height: auto;
+				width: auto;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+		}
+	}
+
+	.form-actions {
+		text-align: center;
+	}
+
+	.button {
+		@include button($c-white, transparent);
+		display: inline-block;
+		height: auto;
+		width: auto;
+		text-align: center;
+	}
+
+	.form-more-links {
+		text-align: center;
+    	padding: 20px;
+		a {
+			display: block;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			text-decoration: none;
+			color: $c-white;
+
+		}
+	}
+}

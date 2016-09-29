@@ -1,0 +1,16 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.grid {
+	max-width: 1440px;
+}

@@ -1,0 +1,11 @@
+%ul.home-body
+	-PostType.all.each do | post_type |
+		%li{class: post_type.post_type.downcase}
+			.home-body__content
+				%p I want to…
+				%h1.h1-xl.satisfy= post_type.post_type
+				= link_to posts_path(post_types: post_type.post_type), class: 'button' do
+					-if post_type.post_type === 'Learn'
+						Study It
+					-else
+						Build It

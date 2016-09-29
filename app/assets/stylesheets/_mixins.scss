@@ -1,0 +1,30 @@
+@mixin button($primary, $secondary, $tertiary:$primary){
+	display: inline-block;
+	padding: 30px 70px;
+	font-size: 1.5rem;
+	letter-spacing: 2px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: 6px solid $primary;
+	color: $primary;
+	background: rgba($secondary, .3);
+	transition: .4s ease all;
+
+	&:hover {
+		background: rgba($primary, .3);
+		color: $secondary;
+	}
+
+	&.button-trans {
+		background: $secondary;
+
+		&:hover {
+			background: rgba($primary, .3);
+			color: $tertiary;
+		}
+	}
+	&.button-small {
+		font-size: 1.25rem;
+		padding: 15px 60px;
+	}
+}

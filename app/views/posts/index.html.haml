@@ -1,0 +1,15 @@
+
+-if @posts.count == 0
+	%h3 Oops! No posts here.
+-else
+	-@posts.each do |post|
+		= link_to post_path(post) do
+			%div
+				%p= post.post_type_id
+				%h2= post.title
+				%p= post.description
+		.actions
+			-if user_signed_in?
+				-if post.user_id == current_user.id
+					=link_to 'Edit', edit_post_path(post)
+					= link_to 'Delete', post_path(post), method: :delete, data: {confirm: "Are you sure?"}
