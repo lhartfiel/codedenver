@@ -1,3 +1,4 @@
 = simple_form_for ([@post, @post.comments.build]) do |f|
-	= f.input :description, label: 'Comments'
-	= f.button :submit
+	%div.comment.pt-40{class: f.object.post.post_type.post_type.downcase}
+		= f.input :description, label: false
+		= f.button :submit, 'Submit', class: 'btn button-xsmall'

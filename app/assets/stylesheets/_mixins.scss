@@ -1,17 +1,18 @@
 @mixin button($primary, $secondary, $tertiary:$primary){
 	display: inline-block;
-	padding: 30px 70px;
+	padding: 20px 70px;
 	font-size: 1.5rem;
 	letter-spacing: 2px;
 	text-decoration: none;
 	text-transform: uppercase;
-	border: 6px solid $primary;
+	border: 3px solid $primary;
 	color: $primary;
 	background: rgba($secondary, .3);
 	transition: .4s ease all;
+	border-radius: 86px;
 
 	&:hover {
-		background: rgba($primary, .3);
+		background: rgba($tertiary, .4);
 		color: $secondary;
 	}
 
@@ -19,12 +20,34 @@
 		background: $secondary;
 
 		&:hover {
-			background: rgba($primary, .3);
-			color: $tertiary;
+			background: rgba($tertiary, .4);
+			color: $primary;
 		}
 	}
 	&.button-small {
 		font-size: 1.25rem;
 		padding: 15px 60px;
+	}
+
+	&.button-xsmall {
+		width: auto;
+    	margin: 20px auto;
+		text-align: center;
+		font-size: 1rem;
+		padding: 15px 42px;
+	}
+}
+
+@mixin bp($width, $bp) {
+	@if $width == 'min' {
+		@media(min-width: $bp) {
+			@content;
+		}
+	}
+
+	@else if $width == 'max' {
+		@media(max-width: $bp) {
+			@content;
+		}
 	}
 }

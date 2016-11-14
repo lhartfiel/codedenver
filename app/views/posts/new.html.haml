@@ -1,3 +1,13 @@
-%h1 New Dev Post
-
-= render 'form'
+.post-new
+	.bkg
+		= image_tag('form_bkg2.png')
+		.grid
+			.post-form.pb-60.pt-60
+				.form-wrapper--flex.right
+					.form-wrapper--content
+						%h2.ta-c 
+							%span Create
+							.svg.svg-login
+								= inline_svg "icon_login.svg"
+							%span Post
+						= render 'form'

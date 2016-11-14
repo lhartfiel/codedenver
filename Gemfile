@@ -14,6 +14,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'devise', '~> 3.5.10'
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
+gem 'cocoon', '~> 1.2', '>= 1.2.9'
+gem 'inline_svg'
+
 
 group :development, :test do
   # Call 'byebug' anywhe

@@ -1,3 +1,321 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-wrapper--all {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.post-wrapper {
+	position: relative;
+	flex-basis: 100%;
+	text-align: center;
+	margin-bottom: 40px;
+	font-family: $opensans;
+
+	@include bp(min, $bp-sm) {
+		flex-basis: 50%;
+	}
+
+	@include bp(min, $bp-lg) {
+		flex-basis: 33.3%;
+	}
+
+	&.learn {
+		&:nth-child(2n) {
+			.post-wrapper--each {
+				background: $c-blue;
+			}
+
+			a {
+				&.button {
+					@include button($c-white, $c-blue, transparent);
+
+					&:hover {
+						background: $c-white;
+					}
+				}
+			}
+		}
+
+		a {
+			color: $c-blue;
+
+			&.button {
+				@include button($c-blue, $c-white);
+
+				&:hover {
+					background: $c-blue;
+				}
+			}
+		}
+
+		h3 {
+			&:after{
+				border: 2px solid $c-blue;
+			}
+		}
+
+
+	}
+
+	&:nth-child(2n) {
+		.post-wrapper--each {
+			background: $c-purple;
+			color: $c-white;
+
+			a {
+				color: $c-white;
+			}
+		}
+
+		a {
+			&.button {
+				@include button($c-white, $c-purple, transparent);
+				&:hover {
+					background: $c-white;
+				}
+			}
+		}
+		h3:after {
+			border: 2px solid $c-white;
+		}
+
+		.tags li {
+			border: 1px solid $c-white;
+		}
+	}
+
+	.post-wrapper-copy {
+		text-align: left;
+	}
+	
+	a {
+		display: block;
+		text-decoration: none;
+		color: $c-purple;
+
+		&.button {
+			@include button($c-purple, $c-white);
+			margin: 0 auto;
+
+			&:hover {
+				background: $c-purple;
+			}
+		}
+	}
+
+	p.post-description {
+		margin-bottom: 30px;
+	}
+
+	h3 {
+		position: relative;
+		&:after{
+			content: "";
+			position: absolute;
+			width: 100%;
+			left: 0;
+			bottom: -10px;
+			border: 2px solid $c-purple;
+		}
+	}
+
+	.actions {
+		position: absolute;
+		bottom: 0;
+		a {
+			display: inline;
+			position: relative;
+		}
+
+		a:first-child {
+			margin-right: 12px;
+
+			&:after {
+				position: absolute;
+				content: "|";
+				right: -12px;
+
+			}
+		}
+	}
+}
+
+.learn {
+	.post-wrapper--each {
+		border: 3px solid $c-blue;
+		color: $c-blue;
+	}
+
+	.tags {
+
+		li {
+			background: $c-blue;
+		}
+	}
+}
+
+.post-wrapper--each {
+	height: 100%;
+    margin: 5px;
+    padding: 10px;
+	border: 3px solid $c-purple;
+	background: $c-white;
+	color: $c-purple;
+
+    @include bp(min, $bp-lg) {
+    	margin: 20px;
+    	padding: 20px;
+    }
+}
+
+.tags {
+	padding-left: 0;
+	padding-bottom: 8px;
+
+	li {
+		display: inline;
+		padding: 5px 10px;
+		background: $c-purple;
+		color: white;
+		list-style: none;
+	}
+}
+
+.header-index--wrapper {
+	position: relative;
+	text-align: center;
+	
+}
+.header-index {
+	display: inline-block;
+	text-align: center;
+	padding-right: 20px;
+	padding-left: 20px;
+	color: $c-gray;
+	font-family: $satisfy;
+	text-align: center;
+	background: $c-white;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		height: 1px;
+		z-index: -1;
+
+	}
+
+	&.header-learn {
+		&:before {
+			background: $c-blue;
+		}
+		span {
+			color: $c-blue;
+		}
+	}
+
+
+	&.header-create {
+		&:before {
+			background: $c-purple;
+		}
+		span {
+			color: $c-purple;
+		}
+
+	}
+
+}
+
+
+//Single Show Posts
+.single {
+	font-family: $opensans;
+	
+	h1.title {
+		position: relative;
+
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -10px;
+		}
+	}
+}
+
+.single-learn {
+	h1 {
+		color: $c-blue;
+
+		&:after {
+			border-bottom: 3px solid $c-blue;
+		}
+	}
+
+	.single-tags li {
+		border: 1px solid $c-blue;
+		color: $c-blue;
+	}
+}
+
+.single-create {
+	h1 {
+		color: $c-purple;
+
+		&:after {
+			border-bottom: 3px solid $c-purple;
+		}
+	}
+
+	.single-tags li {
+		border: 1px solid $c-purple;
+		color: $c-purple;
+	}
+}
+
+.post-single--wrapper {
+	width: 75%;
+}
+
+.post-single--comments {
+	margin-top: 50px;
+}
+
+.single-tags {
+	width: 25%;
+
+	.tags {
+		padding-left: 30px;
+	}
+
+	li {
+		display: block;
+		text-align: center;
+		margin-bottom: 15px;
+		background: $c-white;
+	}
+}
+
+.bkg {
+	position: relative;
+	overflow: hidden;
+	
+	img {
+		position: absolute;
+		z-index: -1;
+		min-width: 100%;
+		min-height: 100%;
+	}
+}
+
+
+
+

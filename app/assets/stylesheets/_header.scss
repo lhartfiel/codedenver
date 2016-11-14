@@ -10,6 +10,19 @@ header {
 	ul {
 		float: right;
 	}
+
+	li:not(:last-child) {
+		a {
+			position: relative;
+			margin-right: 20px;
+			&:after {
+				content: "|";
+				position: absolute;
+				right: -15px; 
+				top: 0;
+			}
+		}
+	}
 	a {
 		text-decoration: none;
 	}

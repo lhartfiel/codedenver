@@ -1,0 +1,21 @@
+footer {
+	position: relative;
+	&:before,
+	&:after {
+		content: "";
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    border-top: 1px solid #6F6F6F;
+	    margin: 0 auto;
+	}
+	&:before {
+		top: 35px;
+	    width: 80%;
+	}
+
+	&:after {
+		top: 25px;
+		width: 100%;
+	}
+}

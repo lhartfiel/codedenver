@@ -1,3 +1,52 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.comment-block {
+	width: 80%;
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background: rgba($c-gray, .2);
+	border: 5px double $c-white;
+}
+
+.comment_description {
+	textarea{
+		width: 80%;
+		height: 200px;
+	}
+}
+
+.comment {
+	&.learn {
+		.btn {
+			@include button($c-blue, $c-white);
+			margin: 0 auto;
+
+			&:hover {
+				background: $c-blue;
+			}
+		}
+	}
+	&.create {
+		.btn {
+			@include button($c-purple, $c-white);
+			margin: 0 auto;
+
+			&:hover {
+				background: $c-purple;
+			}
+		}
+	}
+
+	textarea {
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.btn.button-xsmall {
+		display: inline-block;
+		width: auto;
+	}
+}

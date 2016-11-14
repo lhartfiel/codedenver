@@ -1,15 +1,75 @@
+.grid
+	.header-index--wrapper
+		%h1.h1-sm.header-index{class: "header-#{@post_type.downcase}" } 
+			= "Get Ready to" 
+			%span #{@post_type}
+	%ul.dropdown{class: "dropdown-#{@post_type.downcase}" }
+		%li.dropdown--list
+			= link_to '#', class: "dropdown-menu--title uppercase" do
+				Language
+				.svg.dropdown-arrow
+					= inline_svg "icon_button_down.svg"
+			%ul.dropdown-menu
+				%li
+					= link_to 'Show All', posts_path(post_types: @post_type), class: "uppercase pl-20"
+				-Language.all.order('language ASC').each do |language|
+					-if params[:language] == language.language
+						%li.active
+							=link_to language.language, posts_path(languages: language.language, post_types: @post_type), class: 'active uppercase pl-20'
+					-else
+						%li
+							=link_to language.language, posts_path(post_types: @post_type,  languages: language.language), class: "uppercase pl-20"
 
--if @posts.count == 0
-	%h3 Oops! No posts here.
--else
-	-@posts.each do |post|
-		= link_to post_path(post) do
-			%div
-				%p= post.post_type_id
-				%h2= post.title
-				%p= post.description
-		.actions
-			-if user_signed_in?
-				-if post.user_id == current_user.id
-					=link_to 'Edit', edit_post_path(post)
-					= link_to 'Delete', post_path(post), method: :delete, data: {confirm: "Are you sure?"}
+	.post-wrapper--all
+		-if @posts_sorted && @posts_sorted.count == 0
+			%p Oops! Looks like there aren't any posts for #{@language}.
+		-elsif @posts_sorted
+			- @posts_sorted.each do |post|
+				%div.post-wrapper{class: post.post_type.post_type.downcase}
+					-if post.post_type.post_type === 'Learn'
+						.svg
+							= inline_svg "icon_learn.svg"
+					-else
+						.svg
+							= inline_svg "icon_create.svg"
+					.post-wrapper--each
+						%div.post-wrapper-copy
+							%h3= post.title
+							%p.uppercase Posted on #{post.created_at.strftime("%b %d, %Y")}
+							-if post.tags
+								%ul.tags
+									-post.tags.split(',').each do |tag|
+										%li= tag
+							%p.post-description= truncate(post.description, length: 120)
+						= link_to 'Read More', post_path(post), class: 'button button-xsmall'
+						-if user_signed_in?
+							.actions
+								-if post.user_id == current_user.id
+									=link_to 'Edit', edit_post_path(post)
+									= link_to 'Delete', post_path(post), method: :delete, data: {confirm: "Are you sure?"}
+		-elsif @posts.count == 0
+			%h3 Oops! No posts here. Be the first to post!
+		-else
+			-@posts.each do |post|
+				%div.post-wrapper{class: post.post_type.post_type.downcase}
+					-if post.post_type.post_type === 'Learn'
+						.svg
+							= inline_svg "icon_learn.svg"
+					-else
+						.svg
+							= inline_svg "icon_create.svg"
+					.post-wrapper--each
+						%div.post-wrapper-copy
+							%h3= post.title
+							%p.uppercase Posted on #{post.created_at.strftime("%b %d, %Y")}
+							-if post.tags
+								%ul.tags
+									-post.tags.split(',').each do |tag|
+										%li= tag
+							%p.post-description= truncate(post.description, length: 120)
+						= link_to 'Read More', post_path(post), class: 'button button-xsmall'
+						-if user_signed_in?
+							.actions
+								-if post.user_id == current_user.id
+									=link_to 'Edit', edit_post_path(post)
+									= link_to 'Delete', post_path(post), method: :delete, data: {confirm: "Are you sure?"}

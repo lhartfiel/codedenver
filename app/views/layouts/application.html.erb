@@ -6,26 +6,30 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:700" rel="stylesheet">
 
 </head>
 <body>
 <header>
-	<nav class="clearfix pt-16 pb-16">
+	<nav class="clearfix pt-16 pb-16 pr-16 pl-16">
 		<div class="logo">
 			<%= link_to 'Home', root_path %>
 		</div>
 		<ul>
-			<li>
-				<%= link_to 'Post', new_post_path, class: 'black-50' %>
-			</li>
-			<li>
-				<%= link_to 'Sign Up', new_user_registration_path, class: 'black-50' %>
-			</li>
 			<% if user_signed_in? %>
 				<li>
-				  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+					<%= link_to 'Post', new_post_path, class: 'black-50' %>
+				</li>
+				<li>
+					<%= link_to('Logout', destroy_user_session_path, :method => :delete, class: 'black-50') %> 
+				</li>
+				<li>
+					<%= link_to('My Posts', users_path, class: 'black-50') %> 
 				</li>
 			<% else %>
+				<li>
+					<%= link_to 'Sign Up', new_user_registration_path, class: 'black-50' %>
+				</li>
 				<li>
 					<%= link_to 'Login', new_user_session_path, class: 'black-50' %>
 				</li>
@@ -39,7 +43,7 @@
 	<%= yield %>
 </body>
 
-<footer class="pt-16 pb-16">
+<footer class="pt-60 pb-40">
 	<p class="uppercase center black-50">© <%= Date.today.year %> Denver Coding Connections</p>
 </footer>
 </html>

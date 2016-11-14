@@ -1,4 +1,4 @@
-@import 'variables';
+// @import 'variables';
 
 .home-body {
 	padding: 0;
@@ -17,18 +17,46 @@
 		text-decoration: none;
 	}
 
+	.img-wrapper {
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+
+	img {
+		min-width: 100%;
+		min-height: 100%;
+	}
+
 	.learn,
 	.create {
+		position: relative;
 		height: 100%;
-		border: 3px solid $c-white;
+		border-color: $c-white;
+		border-style: solid;
+		overflow: hidden;
 	}
 
 	.learn {
-		background: $c-mint;
+		background: rgba($c-blue, .6);
+		border-width: 3px .5px 3px 3px;
+
+		.home-body__content {
+			left: -50px;
+		}
 	}
 
 	.create {
-		background: $c-purple;
+		background: rgba($c-purple, .6);
+		border-width: 3px 3px 3px .5px;
+
+		.home-body__content {
+			right: -50px;
+		}
+
 	}
 
   	.home-body__content {
@@ -37,21 +65,68 @@
 	    transform: translateY(-50%);
   	}
 
-  	h1 {
+  	h1:not(.h1-xxl) {
   		position: relative;
   		margin-bottom: 150px;
   		margin-top: 0;
-  		&:after {
-  			content: '';
-  			position: absolute;
-  			bottom: -20px;
-  			left: 0;
-  			right: 0;
-  			margin: 0 auto;
-  			border-bottom: 3px solid $c-white;
-  			width: 18%;
-  		}
+  		font-weight: 400;
   	}
+  	.h1-xxl {
+		font-family: $opensans;
+		position: absolute;
+		margin: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+		text-shadow: 3px 5px 0px rgba(0,0,0,0.50);
+		z-index: 5;
 
+		span {
+			display: block;
+		}
+	}
 
+	.home-body__content--header {
+		display: block;
+
+		&:before,
+		&:after,
+		h1:before,
+		h1:after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 34px;
+			height: 34px;
+			border-color:$c-white; /* or whatever colour */
+    		border-style: solid;
+		}
+
+		&:before {
+			top:-5%;
+			left:25%;
+			border-width: 3px 0 0 3px;
+			margin-left: -10px;
+		}
+
+		&:after {
+			top: -5%;
+			right: 25%;
+			border-width: 3px 3px 0 0;
+			margin-right: -10px;
+		}
+
+		h1:before {
+			bottom:-5%;
+			left:25%;
+			border-width: 0 0 3px 3px;
+			margin-left: -10px;
+		}
+		h1:after {
+			bottom:-5%;
+			right:25%;
+			border-width: 0 3px 3px 0;
+			margin-right: -10px;
+		}
+	}
 }

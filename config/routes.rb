@@ -6,18 +6,24 @@ Rails.application.routes.draw do
   # root 'posts#index'
 
   resources :posts do
-    resources :post_types
-    resources :languages
     resources :comments
+    resources :post_types do
+      resources :languages
+    end
   end
 
+  # namespace :admin do
+  #   devise_for :users
+  # end
 
+  namespace :user do
+    resources :posts
+  end
 
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+  get 'users' => 'user/posts#index'
+
+  # resources :users, only: [:index]
+
 
   
 end

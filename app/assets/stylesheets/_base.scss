@@ -1,8 +1,8 @@
-html {
+body {
   box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 .clearfix:after {
@@ -13,4 +13,44 @@ html {
 
 .grid {
 	max-width: 1440px;
+	margin: 0 auto;
+	padding-right: 20px;
+	padding-left: 20px;
+
+	@include bp(min, $bp-md) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	@include bp(min, $bp-lg) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	@include bp(min, $bp-xl) {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+.flex {
+	display: flex;
+}
+svg path{
+	fill: inherit;
+}
+svg {
+	display: block;
+	width: 64px;
+	height: 64px;
+}
+.svg {
+	display: block;
+	position: absolute;
+	margin: 0 auto;
+	top: -10px;
+	left: 0;
+	right: 0;
+	width: 64px;
+	height: 64px;
 }

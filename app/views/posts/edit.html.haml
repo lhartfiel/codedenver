@@ -1,3 +1,17 @@
-%h1 Edit Post
-
-= render 'form'
+.grid
+	.post-form.pb-60.pt-60
+		.form-wrapper--flex.right
+			.form-wrapper--content
+				%h2.ta-c 
+					%span Edit
+					.svg.svg-login
+						= inline_svg "icon_edit.svg"
+					%span Post
+				= simple_form_for @post do |f|
+					%p Select the Post Type
+					= f.collection_radio_buttons :post_type_id, PostType.all, :id, :post_type, :item_wrapper_class => 'form-post--radio pt-16 pb-16'
+					= f.select :language_id, @languages, class: 'form-post--dropdown pt-16 pb-16'
+					= f.input :tags, label: "Enter tags below separated by a comma (Rails, RoR)", placeholder: "Add additional tags (React, Rails, etc)"
+					= f.input :title, label: "Title", wrapper_html: { class: 'form-post--title' }
+					= f.input :description, label: "Description", wrapper_html: { class: 'form-post--description pt-16 pb-16' }
+					= f.button :submit, class: "button button-small button-trans"

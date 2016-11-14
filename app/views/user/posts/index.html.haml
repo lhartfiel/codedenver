@@ -1,0 +1,82 @@
+.grid
+	.user-header--wrapper
+		%h1.h1-sm.header-index My Posts
+	-if @post_types_learn
+		.post-learn--wrapper
+			-@post_types_learn.each do |p|
+				-@posts_learn.each_with_index do |post, index|
+					-if index === 0
+						.post-general.post-individual.post-learn
+							.post-learn--featured.featured
+								.img-wrapper
+									=image_tag("learn_gray.jpg")
+								.svg
+									= inline_svg "icon_learn.svg"
+								%h1.h1-xxxl.uppercase= post.title
+								.post-date.post-learn--date
+									.post-date--block
+										%p.p-date.date-month.uppercase= post.created_at.strftime("%b")
+										%p.p-date-lg.date-day= post.created_at.strftime("%d")
+									%p.p-date.date-year= post.created_at.strftime("%Y")
+							.post--description.post-learn--description.pr-20
+								%p.gray= post.description
+								-if post.user_id == current_user.id
+									.post-buttons.pt-40
+										=link_to 'Edit', edit_post_path(post)
+										= link_to 'Delete', post_path(post), method: :delete, data: {confirm: "Are you sure?"}
+										= link_to 'Show', post_path(post)
+					-else
+						.post-general.post-individual--general.post-learn.clearfix.pt-40.pb-40
+							.post-date.post-learn--date.post-learn--date__inverse
+								.post-date--block
+									%p.p-date.date-month.uppercase= post.created_at.strftime("%b")
+									%p.p-date-lg.date-day= post.created_at.strftime("%d")
+								%p.p-date.date-year= post.created_at.strftime("%Y")
+							.post-individual--general__content
+								%h1.h1-xsm.gray.uppercase= post.title
+								%p.gray= truncate(post.description, length: 120)
+								-if post.user_id == current_user.id
+									.post-buttons.pt-40
+										=link_to 'Edit', edit_post_path(post)
+										= link_to 'Delete', post_path(post), method: :delete, data: {confirm: "Are you sure?"}
+										= link_to 'Show', post_path(post)
+								
+		-if @post_types_create
+			.post-create--wrapper
+				-@post_types_create.each do |p|
+					-@posts_create.each_with_index do |post, index|
+						-if index === 0
+							.post-general.post-individual.post-create
+								.post-create--featured.featured
+									.img-wrapper
+										=image_tag("create_gray.jpg")
+									.svg
+										= inline_svg "icon_create.svg"
+									%h1.h1-xxxl.uppercase= post.title
+									.post-date.post-create--date
+										.post-date--block
+											%p.p-date.date-month.uppercase= post.created_at.strftime("%b")
+											%p.p-date-lg.date-day= post.created_at.strftime("%d")
+										%p.p-date.date-year= post.created_at.strftime("%Y")
+								.post--description.post-create--description.pr-20
+									%p.gray= post.description
+									-if post.user_id == current_user.id
+										.post-buttons.pt-40
+											=link_to 'Edit', edit_post_path(post)
+											= link_to 'Delete', post_path(post), method: :delete, data: {confirm: "Are you sure?"}
+											= link_to 'Show', post_path(post)
+						-else
+							.post-general.post-individual--general.post-create.clearfix.pt-40.pb-40
+								.post-date.post-create--date.post-create--date__inverse
+									.post-date--block
+										%p.p-date.date-month.uppercase= post.created_at.strftime("%b")
+										%p.p-date-lg.date-day= post.created_at.strftime("%d")
+									%p.p-date.date-year= post.created_at.strftime("%Y")
+								.post-individual--general__content
+									%h1.h1-xsm.gray.uppercase= post.title
+									%p.gray= truncate(post.description, length: 120)
+									-if post.user_id == current_user.id
+										.post-buttons.pt-40
+											=link_to 'Edit', edit_post_path(post)
+											= link_to 'Delete', post_path(post), method: :delete, data: {confirm: "Are you sure?"}
+											= link_to 'Show', post_path(post)

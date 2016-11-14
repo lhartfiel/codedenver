@@ -1,6 +1,3 @@
-@import 'variables';
-@import 'typography';
-
 .form-wrapper {
 	background: $c-purple;
 
@@ -32,9 +29,9 @@
 	    &.active {
 	    	top: 0;
 	    	color: transparent;
-
 	    }
 	}
+
 	.input {
 		position: relative;
 		margin-bottom: 20px;
@@ -55,25 +52,6 @@
 		}
 	}
 
-	.user_remember_me {
-		label {
-			position: relative;
-			color: $c-white;
-			padding-left: 0;
-
-			input {
-				height: auto;
-				width: auto;
-				margin-left: 10px;
-				margin-right: 10px;
-			}
-		}
-	}
-
-	.form-actions {
-		text-align: center;
-	}
-
 	.button {
 		@include button($c-white, transparent);
 		display: inline-block;
@@ -82,16 +60,239 @@
 		text-align: center;
 	}
 
-	.form-more-links {
-		text-align: center;
-    	padding: 20px;
-		a {
+}
+.form-wrapper--flex {
+	display: flex;
+
+	&.right {
+		justify-content: flex-end;
+	}
+}
+
+.form-wrapper--content {
+	width: 100%;
+	margin: auto;
+
+	@include bp(min, $bp-lg) {
+		width: 60%;
+	}
+}
+
+.partial {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.post-form {
+	color: $c-white;
+
+	h2 {
+		position: relative;
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+		span {
+			position: relative;
+			display: inline-block;
+		}
+	}
+
+	.svg {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.form-post--dropdown {
+		display: block;
+	}
+	.form-post--radio {
+		display: inline-block;
+		.collection_radio_buttons{
+			// margin-left: 15px;
+			margin-right: 20px;
+		}
+	}
+	.input {
+
+		label {
 			display: block;
+		}
+	}
+	input:not([type="radio"]),
+	select,
+	textarea {
+		height: 60px;
+		width: 100%;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	select {
+		border: none;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	//Style placeholder text
+	::-webkit-input-placeholder {
+		color: $c-white;
+	}
+	::-moz-placeholder {
+		color: $c-white;
+	}
+	:-ms-input-placeholder {
+		color: $c-white;
+	}
+
+	#post_description {
+		height: 100px;
+	}
+
+	.form-more-links {
+		text-align: left;
+    	padding: 30px 20px 20px 0;
+
+		a {
+			position: relative;
+			display: inline-block;
 			padding-top: 5px;
 			padding-bottom: 5px;
+			margin-right: 20px;
 			text-decoration: none;
 			color: $c-white;
 
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: -2px;
+				left: 0;
+				right: 0;
+				width: 0;
+				height: 0;
+				margin: 0 auto;
+				transition: ease all .4s;
+			}
+
+			&:hover {
+				&:after {
+					width: 100%;
+					height: 1px;
+					background: $c-white;
+				}
+			}
+
+			&.password-forgot:before {
+				content: "|";
+				position: absolute;
+				left: -15px;
+				color: $c-white;
+			}
 		}
+	}
+
+	.form-actions {
+		text-align: left;
+	}
+
+	.form-wrapper--content {
+		padding: 20px;
+		margin: inherit;
+    	background: rgba($c-orange, .85);
+
+    	@include bp(min, $bp-lg) {
+    		padding: 20px 50px;
+    	}
+	}
+
+	input[type="submit"] {
+		width: auto;
+
+		&.button{
+			@include button($c-white, transparent);
+		}
+	}
+}
+
+.post-form .input {
+	position: relative;
+	margin-bottom: 30px;
+
+	&.user_remember_me {
+		
+		label {
+			position: relative;
+			color: $c-white;
+			padding-left: 30px;
+			left: 0;
+
+			input {
+				position: absolute;
+				left: 0;
+				height: auto;
+				width: auto;
+			}
+		}
+	}
+
+	textarea,
+	input {
+		background: transparent;
+		color: $c-white;
+		padding-left: 20px;
+		border: none;
+		border-left: 2px solid $c-white;
+		border-bottom: 2px solid $c-white;
+	}
+
+	textarea {
+		padding-top: 25px;
+	}
+	label {
+		position: absolute;
+		font-size: .875rem;
+		left: 20px;
+		text-transform: uppercase;
+
+		abbr[title="required"] {
+			text-decoration: none;
+		}
+	}
+}
+
+
+input[type="radio"] {
+	display: none;
+
+	&:checked + label:before {
+		content: "";
+		background: $c-orange;
+		width: 32px;
+		height: 32px;
+		border: 4px solid $c-white;
+	}
+}
+
+.collection_radio_buttons {
+	position: relative;
+	margin-left: 0;
+	padding-left: 40px;
+
+	&:before {
+		position: absolute;
+		content: "";
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		background: $c-white;
+		transition: .2s ease all;
 	}
 }

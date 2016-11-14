@@ -1,13 +1,20 @@
-.grid.mr-20.ml-20
-	.form-wrapper.pt-10.pb-10.pl-10.pr-10
-		%h2.satisfy.ta-c.white Log In
-
-		= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| 
-			.form-inputs
-				= f.input :email, required: false, autofocus: true, class: 'black-50'
-				= f.input :password, required: false, class: 'black-50' 
-				= f.input :remember_me, as: :boolean if devise_mapping.rememberable? 
-			.form-actions
-				= f.button :submit, "Log in", class: 'button button-small button-trans' 
-
-		= render "devise/shared/links" 
+.post-new
+	.bkg
+		= image_tag('form_signup_bkg.png')
+		.grid
+			.post-form.pb-60.pt-60
+				.form-wrapper--flex.right
+					.form-wrapper--content
+						%h2.ta-c 
+							%span Log
+							.svg.svg-login
+								= inline_svg "icon_login.svg"
+							%span In
+						= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| 
+							.form-inputs
+								= f.input :email, required: false, autofocus: true, class: 'black-50'
+								= f.input :password, required: false, class: 'black-50' 
+								= f.input :remember_me, as: :boolean if devise_mapping.rememberable? 
+							.form-actions
+								= f.button :submit, "Log in", class: 'button button-small button-trans' 
+						= render "devise/shared/links" 

@@ -2,7 +2,9 @@ class PostType < ActiveRecord::Base
 	has_many :posts
 	has_many :languages
 
-	accepts_nested_attributes_for :posts
+	validates :post_type, presence: true
+
+	accepts_nested_attributes_for :posts, allow_destroy: true
 
 
 end

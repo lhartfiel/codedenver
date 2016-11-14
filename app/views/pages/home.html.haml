@@ -1,9 +1,18 @@
 %ul.home-body
+	= content_tag :h1, class: "h1-xxl white uppercase" do
+		%span I 
+		%span want
+		%span to		
 	-PostType.all.each do | post_type |
 		%li{class: post_type.post_type.downcase}
+			.img-wrapper
+				-if post_type.post_type === 'Learn'
+					=image_tag("learn_gray.jpg")
+				-else 
+					=image_tag("create_gray.jpg")	
 			.home-body__content
-				%p I want to…
-				%h1.h1-xl.satisfy= post_type.post_type
+				.home-body__content--header
+					%h1.h1-xl.white.satisfy= post_type.post_type
 				= link_to posts_path(post_types: post_type.post_type), class: 'button' do
 					-if post_type.post_type === 'Learn'
 						Study It

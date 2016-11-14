@@ -1,0 +1,235 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-header--wrapper {
+	position: relative;
+	text-align: center;
+
+	h1 {
+
+		&:before {
+			border: 1px solid $c-gray;
+		}
+	}
+}
+.post-learn--wrapper {
+
+	.img-wrapper {
+		&:after {
+			background: rgba($c-blue, .7);
+		}
+	}
+	.post-date p {
+		color: $c-blue;
+		&.date-year {
+			color: $c-white;
+		}
+	}
+
+	.post-learn:not(:last-child):after {
+		border-color: $c-blue;
+	}
+
+	.post-learn--date__inverse {
+		p {
+			color: $c-white;
+		}
+
+		p.date-year {
+			color: $c-blue;
+		}
+	}
+
+	.post-buttons a {
+		background: $c-blue;
+	}
+}
+
+.post-create--wrapper {
+	.post-create:not(:last-child):after {
+		border-color: $c-purple;
+	}
+
+	.post-individual {
+		margin-top: 30px;
+
+		@include bp(min, $bp-md) {
+			margin-top: 80px;
+		}
+	}
+	.img-wrapper {
+		&:after {
+			background: rgba($c-purple, .7);
+		}
+	}
+	.post-date p {
+		color: $c-purple;
+		&.date-year {
+			color: $c-white;
+		}
+	}
+
+	.post-create--date__inverse {
+		p {
+			color: $c-white;
+		}
+
+		p.date-year {
+			color: $c-purple;
+		}
+	}
+
+	.post-buttons a {
+		background: $c-purple;
+	}
+}
+
+
+
+.post-general {
+	position: relative;
+
+	.post-date {
+		padding-top: 8px;
+		padding-bottom: 8px;
+        text-align: center;
+        font-family: $opensans;
+	}
+
+	.post-date--block {
+		padding: 10px;
+	}
+
+	.date-day {
+		line-height: 2.5rem;
+	}
+
+	.post-buttons {
+		a {
+			color: $c-white;
+			padding: 5px 10px;
+			text-decoration: none;
+		}
+	}
+}
+.post-individual {
+	display: flex;
+	flex-flow: wrap;
+	font-family: $opensans;
+
+	.featured {
+		position: relative;
+		flex-direction: row;
+		width: 100%;
+		margin-bottom: 20px;
+
+		@include bp(min, $bp-md) {
+			width: percentage(2/3);
+		}
+	}
+
+	.svg {
+		left: initial;
+		top: -20px;
+	}
+
+	.img-wrapper {
+		position: relative;
+		overflow: hidden;
+
+		@include bp(min, $bp-md) {
+			margin-right: 30px;
+		}
+
+		@include bp(min, $bp-md) {
+			max-height: 500px;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+	}
+
+	img {
+		min-width: 100%;
+		min-height: 100%;
+	}
+
+	h1 {
+		position: absolute;
+		color: $c-white;
+		bottom: 10px;
+		padding-left: 20px;
+		margin: 0;
+	}
+
+	.post--description {
+		flex-direction: row;
+		display: block;
+		position: relative;
+		width: 100%;
+
+		@include bp(min, $bp-md) {
+			width: percentage(1/3);
+		}
+	}
+
+	.post-date {
+		position: absolute;
+	    top: 0;
+		padding: 8px;
+	    margin-left: 10px;
+        margin-top: 10px;
+	}
+
+	.post-date--block {
+		background: white;
+	}
+}
+
+.post-individual--general {
+	display: flex;
+
+	@include bp(min, $bp-lg) {
+		width: percentage(2/3);
+	}
+
+	&:not(:last-child):after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+		right: 0;
+		border-width: 1px;
+		border-style: solid;
+	}
+
+	h1 {
+		margin: 0;
+	}
+
+	.post-learn--date__inverse,
+	.post-create--date__inverse {
+		float: left;
+		margin-right: 40px;
+	}
+	.post-learn--date__inverse {
+		
+		.post-date--block {
+			background: $c-blue;
+		}
+	}
+
+	.post-create--date__inverse {
+		.post-date--block {
+			background: $c-purple;
+		}
+	}
+}
