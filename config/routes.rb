@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   # root 'posts#index'
 
   resources :posts do
+    member do
+      get :follow
+      get :unfollow
+    end
     resources :comments
     resources :post_types do
       resources :languages
@@ -18,6 +22,8 @@ Rails.application.routes.draw do
 
   namespace :user do
     resources :posts
+    resources :follow
+    resources :unfollow
   end
 
   get 'users' => 'user/posts#index'

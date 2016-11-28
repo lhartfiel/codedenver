@@ -158,6 +158,14 @@
 	}
 }
 
+.post-title {
+	position: relative;
+	h1 {
+		margin-top: 0;
+	}
+}
+
+
 .post-wrapper--each {
 	height: 100%;
     margin: 5px;
@@ -220,7 +228,6 @@
 		}
 	}
 
-
 	&.header-create {
 		&:before {
 			background: $c-purple;
@@ -228,15 +235,14 @@
 		span {
 			color: $c-purple;
 		}
-
 	}
-
 }
 
 
 //Single Show Posts
 .single {
 	font-family: $opensans;
+	margin-top: 30px;
 	
 	h1.title {
 		position: relative;
@@ -249,8 +255,21 @@
 			bottom: -10px;
 		}
 	}
+
+	.flex {
+		@include bp(max, $bp-lg) {
+			display: block;
+		}
+	}
 }
 
+.actions {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	a {
+		padding: 5px 10px;
+	}
+}
 .single-learn {
 	h1 {
 		color: $c-blue;
@@ -282,7 +301,10 @@
 }
 
 .post-single--wrapper {
-	width: 75%;
+	width: 100%;
+	@include bp(min, $bp-lg) {
+		width: 75%;
+	}
 }
 
 .post-single--comments {
@@ -290,17 +312,25 @@
 }
 
 .single-tags {
-	width: 25%;
-
-	.tags {
-		padding-left: 30px;
-	}
+	width: 100%;
 
 	li {
-		display: block;
 		text-align: center;
 		margin-bottom: 15px;
 		background: $c-white;
+	}
+
+	@include bp(min, $bp-lg) {
+		order: 2;
+		width: 25%;
+
+		.tags {
+			padding-left: 30px;
+		}
+
+		li {
+			display: block;
+		}
 	}
 }
 

@@ -2,8 +2,19 @@
 	.single-body
 		.grid
 			.flex
+				.single-tags
+					-if user_signed_in?
+						-if @post.followed_by?(current_user)
+							= link_to "Unfollow Post", unfollow_post_path(@post), class: "no-textdec white uppercase follow-link button-#{@post.post_type.post_type.downcase}"
+						-else
+							= link_to "Follow Post", follow_post_path(@post), class: "no-textdec white uppercase follow-link button-#{@post.post_type.post_type.downcase}"
+					-if @tags
+						%ul.tags
+							-@tags.each do |tag|
+								%li= tag
 				.post-single--wrapper
-					%h1.title.uppercase= @post.title
+					.post-title
+						%h1.title.uppercase= @post.title
 					-if @post.user.email
 						%p.gray.uppercase.pb-40 Posted on #{@post.created_at.strftime("%b %d, %Y")} by #{@post.user.display_name}
 					-else
@@ -12,15 +23,11 @@
 					.actions
 						-if user_signed_in?
 							-if @post.user_id == current_user.id
-								=link_to 'Edit', edit_post_path(@post)
-								= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: "Are you sure?"}
+								=link_to 'Edit', edit_post_path(@post), class: "white no-textdec button-#{@post.post_type.post_type.downcase}"
+								= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: "Are you sure?"}, class: "white no-textdec button-#{@post.post_type.post_type.downcase}"
 					
 					.post-single--comments
 						%p.gray.satisfy.p-lg Interested? Post Your Comment Below.
 						= render 'comments/form'
 						= render @post.comments
-				.single-tags
-					-if @tags
-						%ul.tags
-							-@tags.each do |tag|
-								%li= tag
+				

@@ -7,14 +7,62 @@ header {
 	.logo {
 		float: left;
 	}
-	ul {
+	.menu {
 		float: right;
 	}
+	
+	a {
+		text-decoration: none;
+	}
+}
 
+.primary-menu {
+	text-align: right;
+	margin-top: 0;
+	li {
+		padding: 10px 20px;
+		border: 1px solid $c-orange;
+		transition: .3s ease all;
+
+		&:first-child {
+			margin-right: 10px;
+		}
+
+		&:hover {
+			background: $c-orange;
+
+			a {
+				color: $c-white;
+			}
+		}
+	}
+	
+	a {
+		position: relative;
+		color: $c-orange;
+		font-weight: 600;
+		letter-spacing: 1px;
+
+	}
+}
+
+.secondary-menu {
+	a {
+		position: relative;
+		margin-right: 10px;
+		margin-left: 10px;
+		font-size: .875rem;	
+
+		&:hover {
+			color: $c-orange;
+		}
+	}
+
+	li:last-child a {
+		margin-right: 0;
+	}
 	li:not(:last-child) {
 		a {
-			position: relative;
-			margin-right: 20px;
 			&:after {
 				content: "|";
 				position: absolute;
@@ -22,8 +70,5 @@ header {
 				top: 0;
 			}
 		}
-	}
-	a {
-		text-decoration: none;
 	}
 }

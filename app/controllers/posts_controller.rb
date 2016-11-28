@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-	before_action :find_post, only: [:show, :edit, :update, :destroy]
+	before_action :find_post, only: [:show, :edit, :update, :destroy, :follow, :unfollow]
 	before_action :tags, only: [:show, :edit, :update, :destroy]
 	# before_action :authenticate_user!
 
@@ -17,7 +17,22 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		
+	end
+
+	def follow
+		if current_user
+			current_user.follow(@post)
+			redirect_to(@post)
+			flash[:notice] = "You are now following this post."
+		end
+	end
+
+	def unfollow
+		if current_user
+			current_user.stop_following(@post)
+			redirect_to(@post)
+			flash[:notice] = "You are no longer following this post."
+		end
 	end
 
 	def new

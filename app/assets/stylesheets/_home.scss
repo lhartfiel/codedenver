@@ -1,6 +1,6 @@
-// @import 'variables';
 
 .home-body {
+	position: relative;
 	padding: 0;
 	margin: 0;
 	display: flex;
@@ -8,13 +8,17 @@
 	flex-wrap: wrap;
 	align-items: center;
   	justify-content: center;
-  	height: 100vh;
+  	height: 100%;
 
 	li {
-		width: 50%;
+		width: 100%;
 		text-align: center;
 		list-style: none;
 		text-decoration: none;
+
+		@include bp(min, $bp-lg) {
+			width: 50%;
+		}
 	}
 
 	.img-wrapper {
@@ -45,7 +49,10 @@
 		border-width: 3px .5px 3px 3px;
 
 		.home-body__content {
-			left: -50px;
+
+			@include bp(min, $bp-lg) {
+				left: -50px;
+			}
 		}
 	}
 
@@ -54,40 +61,65 @@
 		border-width: 3px 3px 3px .5px;
 
 		.home-body__content {
-			right: -50px;
+			@include bp(min, $bp-lg) {
+				right: -50px;
+			}
 		}
-
 	}
 
   	.home-body__content {
   		position: relative;
 	    top: 50%;
-	    transform: translateY(-50%);
+
+	    .button {
+			margin-bottom: 100px;
+		}
   	}
 
   	h1:not(.h1-xxl) {
   		position: relative;
-  		margin-bottom: 150px;
+  		margin-bottom: 75px;
   		margin-top: 0;
   		font-weight: 400;
+
+  		@include bp(min, $bp-lg) {
+  			margin-bottom: 150px;
+  		}
   	}
   	.h1-xxl {
 		font-family: $opensans;
-		position: absolute;
 		margin: 0;
-		top: 50%;
-		transform: translateY(-50%);
+		color: $c-gray;
 		text-align: center;
-		text-shadow: 3px 5px 0px rgba(0,0,0,0.50);
 		z-index: 5;
 
-		span {
-			display: block;
+		@include bp(max, $bp-lg) {
+			&:after {
+				content: "…";
+				position: relative;
+			}
+		}
+
+		@include bp(min, $bp-lg) {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			color: $c-white;
+			text-shadow: 3px 5px 0px rgba(0,0,0,0.50);
+
+			span {
+				display: block;
+			}
 		}
 	}
 
 	.home-body__content--header {
 		display: block;
+
+		h1 {
+			position: relative;
+			margin-top: 100px;
+		}
 
 		&:before,
 		&:after,
@@ -98,7 +130,7 @@
 			position: absolute;
 			width: 34px;
 			height: 34px;
-			border-color:$c-white; /* or whatever colour */
+			border-color:$c-white; 
     		border-style: solid;
 		}
 

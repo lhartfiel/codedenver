@@ -1,0 +1,15 @@
+.follow-wrapper
+	.grid
+		.user-header--wrapper
+			%h1.h1-sm.header-index Following
+		-if @posts_follow.count > 0
+			-@posts_follow.each do |follow, post|	
+				.post-general.post-individual--general.clearfix.pt-40.pb-40{class: follow.post_type.post_type.downcase}
+					.post-individual--general__content
+						.post-content
+							%h1.h1-xsm.gray.uppercase= follow.title
+							%p.gray= truncate(follow.description, length: 120)
+						.post-buttons.pt-40
+							= link_to 'Show', post_path(follow), class: "white no-textdec button-#{follow.post_type.post_type.downcase}"
+		-else
+			%h2 Looks like you aren't following any posts

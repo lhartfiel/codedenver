@@ -1,0 +1,39 @@
+.button-learn,
+.button-create {
+	padding: 5px 10px;
+	font-family: $opensans;
+}
+
+.button-learn {
+	background: $c-blue;
+	border: 1px solid $c-blue;
+
+	&:hover {
+		background: $c-white;
+		color: $c-blue;
+		
+	}
+}
+
+.button-create {
+	background: $c-purple;
+	border: 1px solid $c-purple;
+
+	&:hover {
+		background: $c-white;
+		color: $c-purple;
+		
+	}
+}
+
+.follow-link {
+	display: inline-block;
+	right: 0;
+	top: 0;
+	text-align: center;
+
+	@include bp(min, $bp-lg) {
+		display: block;
+		margin-left: 30px;
+	}
+}

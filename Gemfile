@@ -16,6 +16,7 @@ gem 'devise', '~> 3.5.10'
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'inline_svg'
+gem 'acts_as_follower', '~> 0.2.1'
 
 
 group :development, :test do

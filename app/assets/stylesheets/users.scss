@@ -40,10 +40,6 @@
 			color: $c-blue;
 		}
 	}
-
-	.post-buttons a {
-		background: $c-blue;
-	}
 }
 
 .post-create--wrapper {
@@ -79,13 +75,7 @@
 			color: $c-purple;
 		}
 	}
-
-	.post-buttons a {
-		background: $c-purple;
-	}
 }
-
-
 
 .post-general {
 	position: relative;
@@ -103,14 +93,6 @@
 
 	.date-day {
 		line-height: 2.5rem;
-	}
-
-	.post-buttons {
-		a {
-			color: $c-white;
-			padding: 5px 10px;
-			text-decoration: none;
-		}
 	}
 }
 .post-individual {
