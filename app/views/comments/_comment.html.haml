@@ -1,12 +1,12 @@
-.comment-block.pt-20.pb-20
-	%p.p-sm.comment-author.gray.uppercase
-		Posted by:
-		/ -if comment.user.email.blank?
-		/ 	=comment.user.email
-		/ =time_ago_in_words(comment.created_at) 
-		ago
-	%p.comment-description--posted.gray= comment.description
-	-if user_signed_in?
-		-if comment.user_id == current_user.id
-			=link_to 'Edit', edit_post_comment_path(@post, comment)
-			=link_to 'Delete', post_comment_path(@post, comment), method: :delete, data: {confirm: "Are you sure?"}
+-if comment.description
+	.comment-block.pt-20.pb-20
+		%p.p-sm.comment-author.gray.uppercase
+			Posted by:
+			= comment.user.display_name
+			= time_ago_in_words(comment.created_at) 
+			ago
+		%p.comment-description--posted.gray= comment.description
+		-if user_signed_in?
+			-if comment.user_id == current_user.id
+				=link_to 'Edit', edit_post_comment_path(@post, comment), class: "white no-textdec button-#{@post.post_type.post_type.downcase}"
+				=link_to 'Delete', post_comment_path(@post, comment), method: :delete, data: {confirm: "Are you sure?"}, class: "white no-textdec button-#{@post.post_type.post_type.downcase}"

@@ -296,3 +296,12 @@ input[type="radio"] {
 		transition: .2s ease all;
 	}
 }
+
+.edit_comment {
+	.input label {
+		display: none;
+	}
+	textarea {
+		font-size: 1rem;
+	}
+}

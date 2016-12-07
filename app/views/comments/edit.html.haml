@@ -1,5 +1,14 @@
-%h1 Edit Comment
-
-= simple_form_for ([@post, @comment]) do |f|
-	= f.input :description, label: 'Comments'
-	= f.button :submit
+.bkg
+	= image_tag('form_edit_bkg.png')
+	.grid
+		.post-form.pb-60.pt-60
+			.form-wrapper--flex.right
+				.form-wrapper--content
+					%h2.ta-c 
+						%span Edit
+						.svg.svg-login
+							= inline_svg "icon_edit.svg"
+						%span Comment
+						= simple_form_for ([@post, @comment]) do |f|
+							= f.input :description, label: " "
+							= f.button :submit, class: "button button-small button-trans"

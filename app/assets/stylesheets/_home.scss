@@ -119,6 +119,10 @@
 		h1 {
 			position: relative;
 			margin-top: 100px;
+
+			@include bp(min, $bp-xl) {
+				margin-top: 250px;
+			}
 		}
 
 		&:before,

@@ -5,16 +5,19 @@ class CommentsController < ApplicationController
 
 	def create
 		@comment = @post.comments.create(comment_params)
-		if user_signed_in?
-			@comment.user_id = current_user.id
-		
-			if @comment.save
-				flash[:success] = "Comment created!"
-				redirect_to post_path(@post)
-			end
-		else
-			redirect_to new_user_registration_path
+		@comment.user_id = current_user.id
+		# if user_signed_in?
+		if @comment.save
+			flash[:success] = "Comment created!"
+			redirect_to post_path(@post)
 		end
+		# else
+		# 	redirect_to new_user_registration_path
+		# end
+	end
+
+	def new
+		# @comments = Comment.all.map{ |c| [c.user_id, c.display_name] }
 	end
 
 	def edit
@@ -45,7 +48,7 @@ class CommentsController < ApplicationController
 	end
 
 	def comment_params
-		params.require(:comment).permit(:description, :user_id, :post_id)
+		params.require(:comment).permit(:description, :user_id)
 	end
 
 

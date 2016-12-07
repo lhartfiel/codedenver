@@ -3,10 +3,10 @@ class User::PostsController < ApplicationController
 	# before_action :find_user
 
 	def index
-		@post_types_learn = PostType.all.where(post_type: "Learn")
-		@post_types_create = PostType.all.where(post_type: "Create")
-		@posts_learn = current_user.posts.all.where(post_type_id: "1")
-		@posts_create = current_user.posts.all.where(post_type_id: "2")
+		@post_types_learn = PostType.all.where(post_type: "Learn").order('created_at DESC')
+		@post_types_create = PostType.all.where(post_type: "Create").order('created_at DESC')
+		@posts_learn = current_user.posts.all.where(post_type_id: "1").order('created_at DESC')
+		@posts_create = current_user.posts.all.where(post_type_id: "2").order('created_at DESC')
 		
 	end
 
