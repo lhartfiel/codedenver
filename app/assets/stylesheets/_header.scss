@@ -5,10 +5,32 @@ header {
 	}
 
 	.logo {
-		float: left;
+		display: block;
+		width: 100%;
+		text-align: center;
+
+		svg {
+			margin: 0 auto;
+			width: 250px;
+
+			max-width: 300px;
+			height: auto;
+
+			@include bp(min, $bp-md) {
+				float: left;
+				width: 300px;
+			}
+		}
 	}
 	.menu {
-		float: right;
+		display: block;
+		margin-top: 25px;
+		text-align: center;
+
+		@include bp(min, $bp-md) {
+			float: right;
+			margin-top: 0;
+		}
 	}
 	
 	a {
@@ -17,12 +39,21 @@ header {
 }
 
 .primary-menu {
-	text-align: right;
+	text-align: center;
+	padding-left: 0;
 	margin-top: 0;
+
+	@include bp(min, $bp-md) {
+		text-align: right;
+	}
 	li {
-		padding: 10px 20px;
+		padding: 8px 10px;
 		border: 1px solid $c-orange;
 		transition: .3s ease all;
+
+		@include bp(min, $bp-md) {
+			padding: 10px 20px;
+		}
 
 		&:first-child {
 			margin-right: 10px;
@@ -43,10 +74,16 @@ header {
 		font-weight: 600;
 		letter-spacing: 1px;
 
+		@include bp(max, $bp-md) {
+			font-size: 14px;
+		}
+
 	}
 }
 
 .secondary-menu {
+	padding-left: 0;
+	text-align: center;
 	a {
 		position: relative;
 		margin-right: 10px;

@@ -5,12 +5,18 @@ class CommentsController < ApplicationController
 
 	def create
 		@comment = @post.comments.create(comment_params)
-		@comment.user_id = current_user.id
-		# if user_signed_in?
-		if @comment.save
-			flash[:success] = "Comment created!"
-			redirect_to post_path(@post)
+		if user_signed_in?
+			@comment.user_id = current_user.id
+			@comment.save
+				flash[:success] = "Comment created!"
+				redirect_to post_path(@post)
+		else
+			redirect_to new_user_registration_path
 		end
+		# if @comment.save
+		# 	flash[:success] = "Comment created!"
+		# 	redirect_to post_path(@post)
+		# end
 		# else
 		# 	redirect_to new_user_registration_path
 		# end

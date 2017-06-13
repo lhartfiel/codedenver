@@ -25,11 +25,11 @@
                 .form-actions
                   = f.button :submit, "Update", class: 'button button-small button-trans'
 
-              %h3 Cancel My Account
-              %p 
+              %h3.cancel-title Cancel My Account
+              %p.cancel-confirm.uppercase 
                 Leaving us? 
-                = link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete 
-              = link_to "Back", :back
+              = link_to "Cancel my account | ", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "cancel-acct" 
+              = link_to "Go Back", :back, class: "back"
 
 
 

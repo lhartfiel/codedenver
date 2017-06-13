@@ -305,3 +305,15 @@ input[type="radio"] {
 		font-size: 1rem;
 	}
 }
+
+.cancel-title,
+.cancel-confirm {
+	margin-bottom: 10px;
+}
+
+a.cancel-acct,
+a.back {
+	display: inline-block;
+	color: $c-white;
+	text-decoration: none;
+}
