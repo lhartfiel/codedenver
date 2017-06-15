@@ -7,7 +7,7 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
-  	justify-content: center;
+  	justify-content: space-around;
   	height: 100%;
 
 	li {
@@ -73,6 +73,8 @@
 
 	    .button {
 			margin-bottom: 100px;
+			position: relative;
+			z-index: 20;
 		}
   	}
 
@@ -89,6 +91,8 @@
   	.h1-xxl {
 		font-family: $opensans;
 		margin: 0;
+		left: 0;
+		right: 0;
 		color: $c-gray;
 		text-align: center;
 		z-index: 5;
