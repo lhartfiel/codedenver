@@ -47,7 +47,7 @@ h1 {
 		font-size: 2rem;
 	}
 	&.h1-sm {
-		font-size: 3rem;
+		font-size: 2.25rem;
 	}
 	&.h1-xl {
 		font-size: 4rem;
@@ -107,6 +107,10 @@ p {
 
 	h1 {
 		font-size: 3rem;
+
+		&.h1-sm {
+			font-size: 3rem;
+		}
 		&.h1-xl {
 			font-size: 5rem;
 		}

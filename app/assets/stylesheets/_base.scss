@@ -43,14 +43,22 @@ svg {
 	display: block;
 	width: 64px;
 	height: 64px;
+
+	path {
+		fill: $c-white;
+	}
 }
 .svg {
 	display: block;
 	position: absolute;
 	margin: 0 auto;
-	top: -10px;
+	top: -25px;
 	left: 0;
 	right: 0;
 	width: 64px;
 	height: 64px;
+
+	@include bp(min, $bp-lg) {
+		top: -10px;
+	}
 }
