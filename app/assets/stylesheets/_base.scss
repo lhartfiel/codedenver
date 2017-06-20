@@ -59,7 +59,7 @@ svg {
 	height: 64px;
 
 	&.svg-login {
-		
+		top: -10px;
 	}
 
 	@include bp(min, $bp-lg) {
