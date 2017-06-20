@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" >
+  <defs>
+    <circle id="a" cx="27" cy="27" r="27"/>
+    <mask id="b" width="62" height="62" x="-4" y="-4">
+      <rect width="62" height="62" x="-4" y="-4" fill="white"/>
+      <use fill="black" xlink:href="#a"/>
+    </mask>
+    <circle id="c" cx="27" cy="27" r="27"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="rotate(45 23.542 34.35)">
+    <use stroke="#FFFFFF" stroke-width="8" mask="url(#b)" xlink:href="#a"/>
+    <circle cx="27" cy="27" r="27" fill="#FFFFFF"/>
+    <g>
+      <mask id="d" fill="white">
+        <use xlink:href="#c"/>
+      </mask>
+      <use fill="#6A35A8" fill-opacity=".3" xlink:href="#c"/>
+      <rect width="29" height="64" x="27" y="-5" fill="#6A35A8" mask="url(#d)"/>
+    </g>
+    <text fill="#FFFFFF" transform="rotate(-45 27.427 26.581)" font-family="FontAwesome" font-size="32">
+      <tspan x="9.64" y="37.581"></tspan>
+    </text>
+  </g>
+</svg>

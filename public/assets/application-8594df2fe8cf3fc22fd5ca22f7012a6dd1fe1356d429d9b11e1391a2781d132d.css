@@ -1,0 +1,2698 @@
+@charset "UTF-8";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+/* Document
+   ========================================================================== */
+/* line 12, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 26, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 34, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 48, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+/* line 61, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 71, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 80, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 91, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 104, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 114, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 124, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 134, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 143, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 153, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 164, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 172, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 181, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 190, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 198, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 202, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 213, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 222, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 231, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 239, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 251, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 267, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 277, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 288, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 299, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 311, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 322, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 335, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 349, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 358, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 367, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 377, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 387, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+/* line 396, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 406, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+/* line 419, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 428, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 439, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+/* line 447, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+/* line 458, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 1, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_base.scss */
+body {
+  box-sizing: border-box;
+}
+
+/* line 4, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_base.scss */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* line 8, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_base.scss */
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_base.scss */
+.grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+@media (min-width: 768px) {
+  /* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_base.scss */
+  .grid {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_base.scss */
+  .grid {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  /* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_base.scss */
+  .grid {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+/* line 36, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_base.scss */
+.flex {
+  display: flex;
+}
+
+/* line 39, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_base.scss */
+svg path {
+  fill: inherit;
+}
+
+/* line 42, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_base.scss */
+svg {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+/* line 47, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_base.scss */
+svg path {
+  fill: #fff;
+}
+
+/* line 51, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_base.scss */
+.svg {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  top: -25px;
+  left: 0;
+  right: 0;
+  width: 64px;
+  height: 64px;
+}
+@media (min-width: 1024px) {
+  /* line 51, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_base.scss */
+  .svg {
+    top: -10px;
+  }
+}
+
+/* line 2, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+html {
+  font-size: 16px;
+}
+
+/* line 5, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 10, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+body {
+  margin: 0;
+}
+/* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+body .black-50 {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* line 15, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+body .white {
+  color: #fff;
+}
+/* line 16, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+body .orange {
+  color: #E47C64;
+}
+/* line 17, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+body .purple {
+  color: #6A35A8;
+}
+/* line 18, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+body .blue {
+  color: #089ABF;
+}
+/* line 19, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+body .gray {
+  color: #6F6F6F;
+}
+/* line 21, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+body .no-textdec {
+  text-decoration: none;
+}
+/* line 25, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+body .center {
+  text-align: center;
+}
+/* line 28, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+body .uppercase {
+  text-transform: uppercase;
+}
+/* line 32, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+body .ta-c {
+  text-align: center;
+}
+/* line 34, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+body .satisfy {
+  font-family: "Satisfy", cursive;
+}
+
+/* line 39, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.button {
+  display: inline-block;
+  padding: 20px 70px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 3px solid #fff;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  transition: .4s ease all;
+  border-radius: 86px;
+}
+/* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #000;
+}
+/* line 19, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.button.button-trans {
+  background: #000;
+}
+/* line 22, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.button.button-trans:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+/* line 27, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.button.button-small {
+  font-size: 1.25rem;
+  padding: 15px 60px;
+}
+/* line 32, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.button.button-xsmall {
+  width: auto;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1rem;
+  padding: 15px 42px;
+}
+
+/* line 43, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+h1 {
+  font-size: 3.25rem;
+}
+/* line 46, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+h1.h1-xsm {
+  font-size: 2rem;
+}
+/* line 49, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+h1.h1-sm {
+  font-size: 2.25rem;
+}
+/* line 52, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+h1.h1-xl {
+  font-size: 4rem;
+}
+/* line 56, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+h1.h1-xxl {
+  font-size: 4.5rem;
+}
+/* line 59, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+h1.h1-xxxl {
+  font-size: 5rem;
+  line-height: 5.5rem;
+}
+
+/* line 66, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+h2 {
+  font-size: 2.25rem;
+}
+
+/* line 70, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+h3 {
+  font-size: 1.5rem;
+}
+
+/* line 74, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+h4 {
+  font-size: 1.25rem;
+}
+
+/* line 78, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+h5 {
+  font-size: 1rem;
+}
+
+/* line 82, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+p {
+  letter-spacing: .5px;
+  margin: 0;
+  line-height: 22px;
+}
+/* line 87, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+p.p-sm {
+  font-size: .875rem;
+}
+/* line 91, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+p.p-lg {
+  font-size: 1.25rem;
+}
+/* line 95, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+p.p-xl {
+  font-size: 2rem;
+}
+/* line 98, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+p.p-date {
+  font-size: 1.5rem;
+}
+/* line 101, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+p.p-date-lg {
+  font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  /* line 108, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h1 {
+    font-size: 3rem;
+  }
+  /* line 111, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h1.h1-sm {
+    font-size: 3rem;
+  }
+  /* line 114, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h1.h1-xl {
+    font-size: 5rem;
+  }
+  /* line 117, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h1.h1-xxl {
+    font-size: 6rem;
+    line-height: 6.5rem;
+  }
+  /* line 122, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h1.h1-xxxl {
+    font-size: 6.5rem;
+    line-height: 7rem;
+  }
+
+  /* line 127, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  /* line 131, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  /* line 135, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  /* line 139, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 146, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h1 {
+    font-size: 3.25rem;
+  }
+  /* line 148, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h1.h1-xl {
+    font-size: 6rem;
+  }
+  /* line 151, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h1.h1-xxl {
+    font-size: 7rem;
+    line-height: 7.5rem;
+  }
+  /* line 156, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h1.h1-xxxl {
+    font-size: 7.5rem;
+    line-height: 7.5rem;
+  }
+
+  /* line 161, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h2 {
+    font-size: 2.75rem;
+  }
+
+  /* line 165, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h3 {
+    font-size: 2rem;
+  }
+
+  /* line 169, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h4 {
+    font-size: 1.75rem;
+  }
+
+  /* line 173, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h5 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1440px) {
+  /* line 180, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+  h1.h1-xxl {
+    font-size: 9rem;
+    line-height: 9.5rem;
+  }
+}
+/* line 188, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pl-10 {
+  padding-left: 10%;
+}
+
+/* line 189, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pr-10 {
+  padding-right: 10%;
+}
+
+/* line 190, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pt-10 {
+  padding-top: 10%;
+}
+
+/* line 191, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pb-10 {
+  padding-bottom: 10%;
+}
+
+/* line 192, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pt-16 {
+  padding-top: 16px;
+}
+
+/* line 193, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pb-16 {
+  padding-bottom: 16px;
+}
+
+/* line 194, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pr-16 {
+  padding-right: 16px;
+}
+
+/* line 195, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pl-16 {
+  padding-left: 16px;
+}
+
+/* line 196, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.ml-20 {
+  margin-left: 20%;
+}
+
+/* line 197, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.mr-20 {
+  margin-right: 20%;
+}
+
+/* line 198, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pt-20 {
+  padding-top: 20px;
+}
+
+/* line 199, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pl-20 {
+  padding-left: 20px;
+}
+
+/* line 200, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.p4-20 {
+  padding-right: 20px;
+}
+
+/* line 201, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+/* line 202, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pt-40 {
+  padding-top: 40px;
+}
+
+/* line 203, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+/* line 204, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pt-60 {
+  padding-top: 60px;
+}
+
+/* line 205, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_typography.scss */
+.pb-60 {
+  padding-bottom: 60px;
+}
+
+/* line 3, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+header .logo, header li {
+  display: inline-block;
+}
+/* line 7, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+header .logo {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+/* line 12, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+header .logo svg {
+  margin: 0 auto;
+  width: 250px;
+  max-width: 300px;
+  height: auto;
+}
+@media (min-width: 768px) {
+  /* line 12, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+  header .logo svg {
+    float: left;
+    width: 300px;
+  }
+}
+/* line 25, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+header .menu {
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  /* line 25, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+  header .menu {
+    float: right;
+    margin-top: 0;
+  }
+}
+/* line 36, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+header a {
+  text-decoration: none;
+}
+
+/* line 41, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+.primary-menu {
+  text-align: center;
+  padding-left: 0;
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  /* line 41, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+  .primary-menu {
+    text-align: right;
+  }
+}
+/* line 49, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+.primary-menu li {
+  padding: 8px 10px;
+  border: 1px solid #E47C64;
+  transition: .3s ease all;
+}
+@media (min-width: 768px) {
+  /* line 49, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+  .primary-menu li {
+    padding: 10px 20px;
+  }
+}
+/* line 58, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+.primary-menu li:first-child {
+  margin-right: 10px;
+}
+/* line 62, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+.primary-menu li:hover {
+  background: #E47C64;
+}
+/* line 65, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+.primary-menu li:hover a {
+  color: #fff;
+}
+/* line 71, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+.primary-menu a {
+  position: relative;
+  color: #E47C64;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+  /* line 71, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+  .primary-menu a {
+    font-size: 14px;
+  }
+}
+
+/* line 84, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+.secondary-menu {
+  padding-left: 0;
+  text-align: center;
+}
+/* line 87, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+.secondary-menu a {
+  position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: .875rem;
+}
+/* line 93, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+.secondary-menu a:hover {
+  color: #E47C64;
+}
+/* line 98, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+.secondary-menu li:last-child a {
+  margin-right: 0;
+}
+/* line 103, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_header.scss */
+.secondary-menu li:not(:last-child) a:after {
+  content: "|";
+  position: absolute;
+  right: -15px;
+  top: 0;
+}
+
+/* line 1, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_footer.scss */
+footer {
+  position: relative;
+}
+/* line 3, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_footer.scss */
+footer:before, footer:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #6F6F6F;
+  margin: 0 auto;
+}
+/* line 12, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_footer.scss */
+footer:before {
+  top: 35px;
+  width: 80%;
+}
+/* line 17, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_footer.scss */
+footer:after {
+  top: 25px;
+  width: 100%;
+}
+
+/* line 2, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+/* line 13, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body li {
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  text-decoration: none;
+}
+@media (min-width: 1024px) {
+  /* line 13, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+  .home-body li {
+    width: 50%;
+  }
+}
+/* line 24, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .img-wrapper {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+/* line 33, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body img {
+  min-width: 100%;
+  min-height: 100%;
+}
+/* line 38, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .learn,
+.home-body .create {
+  position: relative;
+  height: 100%;
+  border-color: #fff;
+  border-style: solid;
+  overflow: hidden;
+}
+/* line 47, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .learn {
+  background: rgba(8, 154, 191, 0.6);
+  border-width: 3px .5px 3px 3px;
+}
+@media (min-width: 1024px) {
+  /* line 51, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+  .home-body .learn .home-body__content {
+    left: -50px;
+  }
+}
+/* line 59, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .create {
+  background: rgba(106, 53, 168, 0.6);
+  border-width: 3px 3px 3px .5px;
+}
+@media (min-width: 1024px) {
+  /* line 63, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+  .home-body .create .home-body__content {
+    right: -50px;
+  }
+}
+/* line 70, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .home-body__content {
+  position: relative;
+  top: 50%;
+}
+/* line 74, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .home-body__content .button {
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 20;
+}
+/* line 81, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body h1:not(.h1-xxl) {
+  position: relative;
+  margin-bottom: 75px;
+  margin-top: 0;
+  font-weight: 400;
+}
+@media (min-width: 1024px) {
+  /* line 81, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+  .home-body h1:not(.h1-xxl) {
+    margin-bottom: 150px;
+  }
+}
+/* line 91, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .h1-xxl {
+  font-family: "Open Sans Condensed", sans-serif;
+  margin: 0;
+  left: 0;
+  right: 0;
+  color: #6F6F6F;
+  text-align: center;
+  z-index: 5;
+}
+@media (max-width: 1024px) {
+  /* line 101, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+  .home-body .h1-xxl:after {
+    content: "…";
+    position: relative;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 91, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+  .home-body .h1-xxl {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-shadow: 3px 5px 0px rgba(0, 0, 0, 0.5);
+  }
+  /* line 114, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+  .home-body .h1-xxl span {
+    display: block;
+  }
+}
+/* line 120, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .home-body__content--header {
+  display: block;
+}
+/* line 123, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .home-body__content--header h1 {
+  position: relative;
+  margin-top: 100px;
+}
+@media (min-width: 1440px) {
+  /* line 123, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+  .home-body .home-body__content--header h1 {
+    margin-top: 250px;
+  }
+}
+/* line 132, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .home-body__content--header:before, .home-body .home-body__content--header:after,
+.home-body .home-body__content--header h1:before,
+.home-body .home-body__content--header h1:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-color: #fff;
+  border-style: solid;
+}
+/* line 145, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .home-body__content--header:before {
+  top: -5%;
+  left: 25%;
+  border-width: 3px 0 0 3px;
+  margin-left: -10px;
+}
+/* line 152, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .home-body__content--header:after {
+  top: -5%;
+  right: 25%;
+  border-width: 3px 3px 0 0;
+  margin-right: -10px;
+}
+/* line 159, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .home-body__content--header h1:before {
+  bottom: -5%;
+  left: 25%;
+  border-width: 0 0 3px 3px;
+  margin-left: -10px;
+}
+/* line 165, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_home.scss */
+.home-body .home-body__content--header h1:after {
+  bottom: -5%;
+  right: 25%;
+  border-width: 0 3px 3px 0;
+  margin-right: -10px;
+}
+
+/* line 1, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.form-wrapper {
+  background: #6A35A8;
+}
+/* line 4, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.form-wrapper h2 {
+  position: relative;
+  margin-bottom: 40px;
+}
+/* line 8, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.form-wrapper h2:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-bottom: 1px solid #fff;
+  width: 80%;
+}
+/* line 20, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.form-wrapper label {
+  position: absolute;
+  top: 50%;
+  padding-left: 20px;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  transition: .3s ease all;
+}
+/* line 29, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.form-wrapper label.active {
+  top: 0;
+  color: transparent;
+}
+/* line 35, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.form-wrapper .input {
+  position: relative;
+  margin-bottom: 20px;
+}
+/* line 40, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.form-wrapper .input:focus label {
+  color: transparent;
+}
+/* line 45, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.form-wrapper input {
+  width: 100%;
+  height: 60px;
+  padding-left: 20px;
+}
+/* line 50, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.form-wrapper input:focus {
+  outline: none;
+}
+/* line 55, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.form-wrapper .button {
+  display: inline-block;
+  padding: 20px 70px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 3px solid #fff;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  transition: .4s ease all;
+  border-radius: 86px;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  text-align: center;
+}
+/* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.form-wrapper .button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: transparent;
+}
+/* line 19, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.form-wrapper .button.button-trans {
+  background: transparent;
+}
+/* line 22, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.form-wrapper .button.button-trans:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+/* line 27, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.form-wrapper .button.button-small {
+  font-size: 1.25rem;
+  padding: 15px 60px;
+}
+/* line 32, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.form-wrapper .button.button-xsmall {
+  width: auto;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1rem;
+  padding: 15px 42px;
+}
+
+/* line 64, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.form-wrapper--flex {
+  display: flex;
+}
+/* line 67, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.form-wrapper--flex.right {
+  justify-content: flex-end;
+}
+
+/* line 72, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.form-wrapper--content {
+  width: 100%;
+  margin: auto;
+}
+@media (min-width: 1024px) {
+  /* line 72, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+  .form-wrapper--content {
+    width: 60%;
+  }
+}
+
+/* line 81, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.partial {
+  display: none;
+}
+/* line 84, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.partial.active {
+  display: block;
+}
+
+/* line 89, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form {
+  color: #fff;
+}
+/* line 92, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form h2 {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 97, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form h2 span {
+  position: relative;
+  display: inline-block;
+}
+/* line 103, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .svg {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 109, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .form-post--dropdown {
+  display: block;
+}
+/* line 112, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .form-post--radio {
+  display: inline-block;
+}
+/* line 114, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .form-post--radio .collection_radio_buttons {
+  margin-right: 20px;
+}
+/* line 121, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .input label {
+  display: block;
+}
+/* line 125, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form input:not([type="radio"]),
+.post-form select,
+.post-form textarea {
+  height: 60px;
+  width: 100%;
+}
+/* line 131, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form input:not([type="radio"]):focus,
+.post-form select:focus,
+.post-form textarea:focus {
+  outline: none;
+}
+/* line 136, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form select {
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* line 143, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form ::-webkit-input-placeholder {
+  color: #fff;
+}
+/* line 146, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form ::-moz-placeholder {
+  color: #fff;
+}
+/* line 149, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form :-ms-input-placeholder {
+  color: #fff;
+}
+/* line 153, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form #post_description {
+  height: 100px;
+}
+/* line 157, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .form-more-links {
+  text-align: left;
+  padding: 30px 20px 20px 0;
+}
+/* line 161, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .form-more-links a {
+  position: relative;
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+/* line 170, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .form-more-links a:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  transition: ease all .4s;
+}
+/* line 183, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .form-more-links a:hover:after {
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+/* line 190, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .form-more-links a.password-forgot:before {
+  content: "|";
+  position: absolute;
+  left: -15px;
+  color: #fff;
+}
+/* line 199, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .form-actions {
+  text-align: left;
+}
+/* line 203, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .form-wrapper--content {
+  padding: 20px;
+  margin: inherit;
+  background: rgba(228, 124, 100, 0.85);
+}
+@media (min-width: 1024px) {
+  /* line 203, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+  .post-form .form-wrapper--content {
+    padding: 20px 50px;
+  }
+}
+/* line 213, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form input[type="submit"] {
+  width: auto;
+}
+/* line 216, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form input[type="submit"].button {
+  display: inline-block;
+  padding: 20px 70px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 3px solid #fff;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  transition: .4s ease all;
+  border-radius: 86px;
+}
+/* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-form input[type="submit"].button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: transparent;
+}
+/* line 19, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-form input[type="submit"].button.button-trans {
+  background: transparent;
+}
+/* line 22, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-form input[type="submit"].button.button-trans:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+/* line 27, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-form input[type="submit"].button.button-small {
+  font-size: 1.25rem;
+  padding: 15px 60px;
+}
+/* line 32, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-form input[type="submit"].button.button-xsmall {
+  width: auto;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1rem;
+  padding: 15px 42px;
+}
+
+/* line 222, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .input {
+  position: relative;
+  margin-bottom: 30px;
+}
+/* line 228, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .input.user_remember_me label {
+  position: relative;
+  color: #fff;
+  padding-left: 30px;
+  left: 0;
+}
+/* line 234, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .input.user_remember_me label input {
+  position: absolute;
+  left: 0;
+  height: auto;
+  width: auto;
+}
+/* line 243, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .input textarea,
+.post-form .input input {
+  background: transparent;
+  color: #fff;
+  padding-left: 20px;
+  border: none;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+/* line 253, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .input textarea {
+  padding-top: 25px;
+}
+/* line 256, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .input label {
+  position: absolute;
+  font-size: .875rem;
+  left: 20px;
+  text-transform: uppercase;
+}
+/* line 262, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.post-form .input label abbr[title="required"] {
+  text-decoration: none;
+}
+
+/* line 269, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+input[type="radio"] {
+  display: none;
+}
+/* line 272, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+input[type="radio"]:checked + label:before {
+  content: "";
+  background: #E47C64;
+  width: 32px;
+  height: 32px;
+  border: 4px solid #fff;
+}
+
+/* line 281, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.collection_radio_buttons {
+  position: relative;
+  margin-left: 0;
+  padding-left: 40px;
+}
+/* line 286, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.collection_radio_buttons:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  transition: .2s ease all;
+}
+
+/* line 301, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.edit_comment .input label {
+  display: none;
+}
+/* line 304, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.edit_comment textarea {
+  font-size: 1rem;
+}
+
+/* line 309, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+.cancel-title,
+.cancel-confirm {
+  margin-bottom: 10px;
+}
+
+/* line 314, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_forms.scss */
+a.cancel-acct,
+a.back {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 4, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/comments.scss */
+.comment-block {
+  width: 80%;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: rgba(111, 111, 111, 0.2);
+  border: 5px double #fff;
+}
+
+/* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/comments.scss */
+.comment_description textarea {
+  width: 80%;
+  height: 200px;
+}
+
+/* line 22, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/comments.scss */
+.comment.learn .btn {
+  display: inline-block;
+  padding: 20px 70px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 3px solid #089ABF;
+  color: #089ABF;
+  background: rgba(255, 255, 255, 0.3);
+  transition: .4s ease all;
+  border-radius: 86px;
+  margin: 0 auto;
+}
+/* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.comment.learn .btn:hover {
+  background: rgba(8, 154, 191, 0.4);
+  color: #fff;
+}
+/* line 19, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.comment.learn .btn.button-trans {
+  background: #fff;
+}
+/* line 22, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.comment.learn .btn.button-trans:hover {
+  background: rgba(8, 154, 191, 0.4);
+  color: #089ABF;
+}
+/* line 27, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.comment.learn .btn.button-small {
+  font-size: 1.25rem;
+  padding: 15px 60px;
+}
+/* line 32, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.comment.learn .btn.button-xsmall {
+  width: auto;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1rem;
+  padding: 15px 42px;
+}
+/* line 26, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/comments.scss */
+.comment.learn .btn:hover {
+  background: #089ABF;
+}
+/* line 32, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/comments.scss */
+.comment.create .btn {
+  display: inline-block;
+  padding: 20px 70px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 3px solid #6A35A8;
+  color: #6A35A8;
+  background: rgba(255, 255, 255, 0.3);
+  transition: .4s ease all;
+  border-radius: 86px;
+  margin: 0 auto;
+}
+/* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.comment.create .btn:hover {
+  background: rgba(106, 53, 168, 0.4);
+  color: #fff;
+}
+/* line 19, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.comment.create .btn.button-trans {
+  background: #fff;
+}
+/* line 22, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.comment.create .btn.button-trans:hover {
+  background: rgba(106, 53, 168, 0.4);
+  color: #6A35A8;
+}
+/* line 27, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.comment.create .btn.button-small {
+  font-size: 1.25rem;
+  padding: 15px 60px;
+}
+/* line 32, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.comment.create .btn.button-xsmall {
+  width: auto;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1rem;
+  padding: 15px 42px;
+}
+/* line 36, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/comments.scss */
+.comment.create .btn:hover {
+  background: #6A35A8;
+}
+/* line 43, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/comments.scss */
+.comment textarea:focus {
+  outline: none;
+}
+/* line 48, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/comments.scss */
+.comment .btn.button-xsmall {
+  display: inline-block;
+  width: auto;
+}
+
+/* line 54, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/comments.scss */
+.comment-edits {
+  margin-top: 15px;
+}
+
+/* line 5, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.user-header--wrapper {
+  position: relative;
+  text-align: center;
+}
+/* line 11, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.user-header--wrapper h1:before {
+  border: 1px solid #6F6F6F;
+}
+
+/* line 19, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-learn--wrapper .img-wrapper:after {
+  background: rgba(8, 154, 191, 0.7);
+}
+/* line 23, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-learn--wrapper .post-date p {
+  color: #089ABF;
+}
+/* line 25, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-learn--wrapper .post-date p.date-year {
+  color: #fff;
+}
+/* line 30, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-learn--wrapper .post-learn:not(:last-child):after {
+  border-color: #089ABF;
+}
+/* line 35, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-learn--wrapper .post-learn--date__inverse p {
+  color: #fff;
+}
+/* line 39, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-learn--wrapper .post-learn--date__inverse p.date-year {
+  color: #089ABF;
+}
+
+/* line 46, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-create--wrapper .post-create:not(:last-child):after {
+  border-color: #6A35A8;
+}
+/* line 50, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-create--wrapper .post-individual {
+  margin-top: 30px;
+}
+@media (min-width: 768px) {
+  /* line 50, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+  .post-create--wrapper .post-individual {
+    margin-top: 80px;
+  }
+}
+/* line 58, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-create--wrapper .img-wrapper:after {
+  background: rgba(106, 53, 168, 0.7);
+}
+/* line 62, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-create--wrapper .post-date p {
+  color: #6A35A8;
+}
+/* line 64, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-create--wrapper .post-date p.date-year {
+  color: #fff;
+}
+/* line 70, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-create--wrapper .post-create--date__inverse p {
+  color: #fff;
+}
+/* line 74, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-create--wrapper .post-create--date__inverse p.date-year {
+  color: #6A35A8;
+}
+
+/* line 80, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-general {
+  position: relative;
+}
+/* line 83, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-general .post-date {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+/* line 90, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-general .post-date--block {
+  padding: 10px;
+}
+/* line 94, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-general .date-day {
+  line-height: 2.5rem;
+}
+
+/* line 98, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual {
+  display: flex;
+  flex-flow: wrap;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+/* line 103, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual .featured {
+  position: relative;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  /* line 103, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+  .post-individual .featured {
+    width: 66.66667%;
+  }
+}
+/* line 114, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual .svg {
+  left: initial;
+  top: -20px;
+}
+/* line 119, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual .img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  /* line 119, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+  .post-individual .img-wrapper {
+    margin-right: 30px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 119, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+  .post-individual .img-wrapper {
+    max-height: 500px;
+  }
+}
+/* line 131, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual .img-wrapper:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+/* line 141, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual img {
+  min-width: 100%;
+  min-height: 100%;
+}
+/* line 146, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual h1 {
+  position: absolute;
+  color: #fff;
+  bottom: 10px;
+  padding-left: 20px;
+  margin: 0;
+}
+/* line 154, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual .post--description {
+  flex-direction: row;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  /* line 154, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+  .post-individual .post--description {
+    width: 33.33333%;
+  }
+}
+/* line 165, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual .post-date {
+  position: absolute;
+  top: 0;
+  padding: 8px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+/* line 173, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual .post-date--block {
+  background: white;
+}
+
+/* line 178, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual--general {
+  display: flex;
+}
+@media (min-width: 1024px) {
+  /* line 178, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+  .post-individual--general {
+    width: 66.66667%;
+  }
+}
+/* line 185, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual--general:not(:last-child):after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  border-width: 1px;
+  border-style: solid;
+}
+/* line 196, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual--general h1 {
+  margin: 0;
+}
+/* line 200, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual--general .post-learn--date__inverse,
+.post-individual--general .post-create--date__inverse {
+  float: left;
+  margin-right: 40px;
+}
+/* line 207, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual--general .post-learn--date__inverse .post-date--block {
+  background: #089ABF;
+}
+/* line 213, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/users.scss */
+.post-individual--general .post-create--date__inverse .post-date--block {
+  background: #6A35A8;
+}
+
+/* line 1, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  list-style: none;
+  padding-left: 5px;
+  margin-bottom: 30px;
+}
+@media (min-width: 1024px) {
+  /* line 1, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+  .dropdown {
+    margin-left: 20px;
+  }
+}
+
+/* line 16, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-learn .dropdown-menu--title {
+  border: 1px solid #089ABF;
+  color: #089ABF;
+}
+/* line 21, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-learn svg polygon {
+  fill: #089ABF;
+}
+/* line 26, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-learn .dropdown-menu a {
+  color: #089ABF;
+}
+/* line 29, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-learn .dropdown-menu li:hover {
+  background: #089ABF;
+}
+
+/* line 35, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-create .dropdown-menu--title {
+  border: 1px solid #6A35A8;
+  color: #6A35A8;
+}
+
+/* line 41, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown--list {
+  display: inline-block;
+  width: auto;
+}
+
+/* line 46, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-menu--title {
+  position: relative;
+  display: inline-block;
+  background: lightgray;
+  padding: 8px 50px;
+  background: #fff;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* line 56, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-arrow {
+  right: initial;
+  height: auto;
+  right: -20px;
+  left: initial;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 64, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-arrow svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* line 69, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-menu {
+  position: absolute;
+  opacity: 0;
+  padding-left: 0px;
+  top: -10px;
+  height: 0;
+  width: 100%;
+  transition: .4s ease all;
+  z-index: -1;
+}
+/* line 79, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-menu.active {
+  display: block;
+  height: auto;
+  top: 36px;
+  opacity: 1;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 0px 0px 2px 0px #6F6F6F;
+}
+/* line 88, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-menu a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+/* line 93, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-menu li {
+  list-style: none;
+  background: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* line 99, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-menu li:hover {
+  background: #6A35A8;
+}
+/* line 101, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_dropdown.scss */
+.dropdown-menu li:hover a {
+  color: #fff;
+}
+
+/* line 1, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_buttons.scss */
+.button-learn,
+.button-create {
+  display: inline-block;
+  padding: 5px 10px;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+/* line 8, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_buttons.scss */
+.button-learn {
+  background: #089ABF;
+  border: 1px solid #089ABF;
+}
+/* line 12, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_buttons.scss */
+.button-learn:hover {
+  background: #fff;
+  color: #089ABF;
+}
+
+/* line 19, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_buttons.scss */
+.button-create {
+  background: #6A35A8;
+  border: 1px solid #6A35A8;
+}
+/* line 23, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_buttons.scss */
+.button-create:hover {
+  background: #fff;
+  color: #6A35A8;
+}
+
+/* line 30, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_buttons.scss */
+.follow-link {
+  display: inline-block;
+  right: 0;
+  top: 0;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  /* line 30, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/components/_buttons.scss */
+  .follow-link {
+    display: block;
+    margin-left: 30px;
+  }
+}
+
+/* line 5, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper--all {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/* line 11, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper {
+  position: relative;
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+@media (min-width: 600px) {
+  /* line 11, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+  .post-wrapper {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 11, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+  .post-wrapper {
+    flex-basis: 33.3%;
+  }
+}
+/* line 28, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper.learn:nth-child(2n) .post-wrapper--each {
+  background: #089ABF;
+}
+/* line 33, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper.learn:nth-child(2n) a.button {
+  display: inline-block;
+  padding: 20px 70px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 3px solid #fff;
+  color: #fff;
+  background: rgba(8, 154, 191, 0.3);
+  transition: .4s ease all;
+  border-radius: 86px;
+}
+/* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper.learn:nth-child(2n) a.button:hover {
+  background: rgba(0, 0, 0, 0.4);
+  color: #089ABF;
+}
+/* line 19, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper.learn:nth-child(2n) a.button.button-trans {
+  background: #089ABF;
+}
+/* line 22, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper.learn:nth-child(2n) a.button.button-trans:hover {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+/* line 27, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper.learn:nth-child(2n) a.button.button-small {
+  font-size: 1.25rem;
+  padding: 15px 60px;
+}
+/* line 32, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper.learn:nth-child(2n) a.button.button-xsmall {
+  width: auto;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1rem;
+  padding: 15px 42px;
+}
+/* line 36, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper.learn:nth-child(2n) a.button:hover {
+  background: #fff;
+}
+/* line 43, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper.learn a {
+  color: #089ABF;
+}
+/* line 46, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper.learn a.button {
+  display: inline-block;
+  padding: 20px 70px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 3px solid #089ABF;
+  color: #089ABF;
+  background: rgba(255, 255, 255, 0.3);
+  transition: .4s ease all;
+  border-radius: 86px;
+}
+/* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper.learn a.button:hover {
+  background: rgba(8, 154, 191, 0.4);
+  color: #fff;
+}
+/* line 19, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper.learn a.button.button-trans {
+  background: #fff;
+}
+/* line 22, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper.learn a.button.button-trans:hover {
+  background: rgba(8, 154, 191, 0.4);
+  color: #089ABF;
+}
+/* line 27, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper.learn a.button.button-small {
+  font-size: 1.25rem;
+  padding: 15px 60px;
+}
+/* line 32, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper.learn a.button.button-xsmall {
+  width: auto;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1rem;
+  padding: 15px 42px;
+}
+/* line 49, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper.learn a.button:hover {
+  background: #089ABF;
+}
+/* line 56, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper.learn h3:after {
+  border: 2px solid #089ABF;
+}
+/* line 65, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper:nth-child(2n) .post-wrapper--each {
+  background: #6A35A8;
+  color: #fff;
+}
+/* line 69, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper:nth-child(2n) .post-wrapper--each a {
+  color: #fff;
+}
+/* line 75, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper:nth-child(2n) a.button {
+  display: inline-block;
+  padding: 20px 70px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 3px solid #fff;
+  color: #fff;
+  background: rgba(106, 53, 168, 0.3);
+  transition: .4s ease all;
+  border-radius: 86px;
+}
+/* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper:nth-child(2n) a.button:hover {
+  background: rgba(0, 0, 0, 0.4);
+  color: #6A35A8;
+}
+/* line 19, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper:nth-child(2n) a.button.button-trans {
+  background: #6A35A8;
+}
+/* line 22, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper:nth-child(2n) a.button.button-trans:hover {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+/* line 27, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper:nth-child(2n) a.button.button-small {
+  font-size: 1.25rem;
+  padding: 15px 60px;
+}
+/* line 32, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper:nth-child(2n) a.button.button-xsmall {
+  width: auto;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1rem;
+  padding: 15px 42px;
+}
+/* line 77, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper:nth-child(2n) a.button:hover {
+  background: #fff;
+}
+/* line 82, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper:nth-child(2n) h3:after {
+  border: 2px solid #fff;
+}
+/* line 86, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper:nth-child(2n) .tags li {
+  border: 1px solid #fff;
+}
+/* line 91, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper .post-wrapper-copy {
+  text-align: left;
+}
+/* line 95, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper a {
+  display: block;
+  text-decoration: none;
+  color: #6A35A8;
+}
+/* line 100, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper a.button {
+  display: inline-block;
+  padding: 20px 70px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 3px solid #6A35A8;
+  color: #6A35A8;
+  background: rgba(255, 255, 255, 0.3);
+  transition: .4s ease all;
+  border-radius: 86px;
+  margin: 0 auto;
+}
+/* line 14, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper a.button:hover {
+  background: rgba(106, 53, 168, 0.4);
+  color: #fff;
+}
+/* line 19, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper a.button.button-trans {
+  background: #fff;
+}
+/* line 22, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper a.button.button-trans:hover {
+  background: rgba(106, 53, 168, 0.4);
+  color: #6A35A8;
+}
+/* line 27, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper a.button.button-small {
+  font-size: 1.25rem;
+  padding: 15px 60px;
+}
+/* line 32, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_mixins.scss */
+.post-wrapper a.button.button-xsmall {
+  width: auto;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1rem;
+  padding: 15px 42px;
+}
+/* line 104, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper a.button:hover {
+  background: #6A35A8;
+}
+/* line 110, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper p.post-description {
+  margin-bottom: 30px;
+}
+/* line 114, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper h3 {
+  position: relative;
+}
+/* line 116, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper h3:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -10px;
+  border: 2px solid #6A35A8;
+}
+/* line 126, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper .actions {
+  position: absolute;
+  bottom: 0;
+}
+/* line 129, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper .actions a {
+  display: inline;
+  position: relative;
+}
+/* line 134, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper .actions a:first-child {
+  margin-right: 12px;
+}
+/* line 137, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper .actions a:first-child:after {
+  position: absolute;
+  content: "|";
+  right: -12px;
+}
+
+/* line 148, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.learn .post-wrapper--each {
+  border: 3px solid #089ABF;
+  color: #089ABF;
+}
+/* line 155, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.learn .tags li {
+  background: #089ABF;
+}
+
+/* line 161, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-title {
+  position: relative;
+}
+/* line 163, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-title h1 {
+  margin-top: 0;
+}
+
+/* line 169, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-wrapper--each {
+  height: 100%;
+  margin: 5px;
+  padding: 10px;
+  border: 3px solid #6A35A8;
+  background: #fff;
+  color: #6A35A8;
+}
+@media (min-width: 1024px) {
+  /* line 169, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+  .post-wrapper--each {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+/* line 183, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.tags {
+  padding-left: 0;
+  padding-bottom: 8px;
+}
+/* line 187, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.tags li {
+  display: inline;
+  padding: 5px 10px;
+  background: #6A35A8;
+  color: white;
+  list-style: none;
+}
+
+/* line 196, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.header-index--wrapper {
+  position: relative;
+  text-align: center;
+}
+
+/* line 201, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.header-index {
+  display: inline-block;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #6F6F6F;
+  font-family: "Satisfy", cursive;
+  text-align: center;
+  background: #fff;
+}
+/* line 211, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.header-index:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  z-index: -1;
+}
+/* line 223, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.header-index.header-learn:before {
+  background: #089ABF;
+}
+/* line 226, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.header-index.header-learn span {
+  color: #089ABF;
+}
+/* line 232, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.header-index.header-create:before {
+  background: #6A35A8;
+}
+/* line 235, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.header-index.header-create span {
+  color: #6A35A8;
+}
+
+/* line 243, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.single {
+  font-family: "Open Sans Condensed", sans-serif;
+  margin-top: 30px;
+}
+/* line 247, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.single h1.title {
+  position: relative;
+}
+/* line 250, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.single h1.title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+}
+@media (max-width: 1024px) {
+  /* line 259, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+  .single .flex {
+    display: block;
+  }
+}
+
+/* line 266, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.actions {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/* line 269, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.actions a {
+  padding: 5px 10px;
+}
+
+/* line 274, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.single-learn h1 {
+  color: #089ABF;
+}
+/* line 277, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.single-learn h1:after {
+  border-bottom: 3px solid #089ABF;
+}
+/* line 282, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.single-learn .single-tags li {
+  border: 1px solid #089ABF;
+  color: #089ABF;
+}
+
+/* line 289, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.single-create h1 {
+  color: #6A35A8;
+}
+/* line 292, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.single-create h1:after {
+  border-bottom: 3px solid #6A35A8;
+}
+/* line 297, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.single-create .single-tags li {
+  border: 1px solid #6A35A8;
+  color: #6A35A8;
+}
+
+/* line 303, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-single--wrapper {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  /* line 303, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+  .post-single--wrapper {
+    width: 75%;
+  }
+}
+
+/* line 310, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.post-single--comments {
+  margin-top: 50px;
+}
+
+/* line 314, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.single-tags {
+  width: 100%;
+}
+/* line 317, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.single-tags li {
+  text-align: center;
+  margin-bottom: 15px;
+  background: #fff;
+}
+@media (min-width: 1024px) {
+  /* line 314, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+  .single-tags {
+    order: 2;
+    width: 25%;
+  }
+  /* line 327, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+  .single-tags .tags {
+    padding-left: 30px;
+  }
+  /* line 331, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+  .single-tags li {
+    display: block;
+  }
+}
+
+/* line 337, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.bkg {
+  position: relative;
+  overflow: hidden;
+}
+/* line 341, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/posts.scss */
+.bkg img {
+  position: absolute;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* line 3, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_follow.scss */
+.follow-wrapper .post-content {
+  width: 80%;
+}
+@media (min-width: 1024px) {
+  /* line 3, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_follow.scss */
+  .follow-wrapper .post-content {
+    width: 90%;
+  }
+}
+/* line 12, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_follow.scss */
+.follow-wrapper .learn h1 {
+  color: #089ABF;
+}
+/* line 18, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_follow.scss */
+.follow-wrapper .create h1 {
+  color: #6A35A8;
+}
+/* line 23, /Users/lindsayhartfiel/Desktop/Dev Practice/Rails/dev_meetup/app/assets/stylesheets/_follow.scss */
+.follow-wrapper .post-buttons {
+  position: absolute;
+  top: 10%;
+  right: 0;
+}
